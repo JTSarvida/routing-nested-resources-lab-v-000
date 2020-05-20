@@ -4,8 +4,7 @@ class SongsController < ApplicationController
       @songs = Artist.find(params[:artist_id]).songs
     else
       redirect_to artists_path, alert: 'Artist Not found'
-      @posts = Post.all
-    end
+      @songs = Song.all
   end
 
   def show
